@@ -10,8 +10,8 @@ export const meta = {
   year: "2026",
   // Replace with your actual avatar/character image path in /public/
   // e.g. heroImage: "/avatar.png"
-  heroImage: null,
-  aboutImage: null,
+  heroImage: "/img/IMG2.jpg",
+  aboutImage: "/img/IMG1.jpg",
 };
 
 export const roles = [
