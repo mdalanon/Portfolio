@@ -92,26 +92,38 @@ function DesignModal({ design, onClose }) {
             position: "relative",
             overflow: "hidden",
           }}>
-            {/* Placeholder for image */}
-            <div style={{
-              width: "100%",
-              height: "100%",
-              background: "linear-gradient(135deg, var(--pink-dim), var(--bg-card))",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "var(--text-4)",
-              fontFamily: "var(--font-mono)",
-              fontSize: 16,
-              textAlign: "center",
-              padding: "20px",
-            }}>
-              {design.title}
-              <br />
-              <span style={{ fontSize: 12, opacity: 0.7 }}>
-                Image preview coming soon
-              </span>
-            </div>
+            {/* Actual image or placeholder */}
+            {design.image ? (
+              <img
+                src={design.image}
+                alt={design.title}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            ) : (
+              <div style={{
+                width: "100%",
+                height: "100%",
+                background: "linear-gradient(135deg, var(--pink-dim), var(--bg-card))",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "var(--text-4)",
+                fontFamily: "var(--font-mono)",
+                fontSize: 16,
+                textAlign: "center",
+                padding: "20px",
+              }}>
+                {design.title}
+                <br />
+                <span style={{ fontSize: 12, opacity: 0.7 }}>
+                  Image preview coming soon
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Design info */}
@@ -361,20 +373,32 @@ export default function DesignSection() {
                   position: "relative",
                   overflow: "hidden",
                 }}>
-                  {/* Placeholder for image - replace with actual image */}
-                  <div style={{
-                    width: "100%",
-                    height: "100%",
-                    background: "linear-gradient(135deg, var(--pink-dim), var(--bg-card))",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--text-4)",
-                    fontFamily: "var(--font-mono)",
-                    fontSize: 12,
-                  }}>
-                    {design.title}
-                  </div>
+                  {/* Actual image or placeholder */}
+                  {design.image ? (
+                    <img
+                      src={design.image}
+                      alt={design.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  ) : (
+                    <div style={{
+                      width: "100%",
+                      height: "100%",
+                      background: "linear-gradient(135deg, var(--pink-dim), var(--bg-card))",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "var(--text-4)",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 12,
+                    }}>
+                      {design.title}
+                    </div>
+                  )}
 
                   {/* Hover overlay */}
                   <div style={{
