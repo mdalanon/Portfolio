@@ -212,6 +212,15 @@ export default function Events() {
           <p className="sec-label">// 09</p>
           <SectionDivider />
           <h2 className="sec-title">EVENTS</h2>
+          <p style={{
+            fontFamily: "var(--font-body)",
+            fontSize: 16,
+            color: "var(--text-3)",
+            marginBottom: 32,
+            maxWidth: 600,
+          }}>
+            Events i've organized. Click on any event to see details and photos.
+          </p>
         </Reveal>
         <div>
           {events.map((e, i) => (

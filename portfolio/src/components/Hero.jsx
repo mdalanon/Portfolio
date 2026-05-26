@@ -49,7 +49,9 @@ export default function Hero() {
         gap: 48,
         position: "relative", zIndex: 1,
         paddingTop: 100,
-      }}>
+      }}
+      className="hero-grid"
+      >
 
         {/* LEFT — text */}
         <div style={{ animation: "fadeUp .9s .1s both" }}>
@@ -125,16 +127,22 @@ export default function Hero() {
 
         {/* RIGHT — character art / avatar */}
         <div style={{
-          display: "flex", justifyContent: "center", alignItems: "flex-end",
+          display: "flex", justifyContent: "center", alignItems: "center",
           animation: "fadeUp 1s .3s both",
           position: "relative",
-        }}>
+          minHeight: 320,
+          width: "100%",
+          maxWidth: 360,
+          margin: "0 auto",
+        }} className="hero-image-container">
           {meta.heroImage ? (
             <img
               src={meta.heroImage}
               alt="Character"
               style={{
-                maxHeight: 480,
+                width: "100%",
+                maxWidth: 320,
+                maxHeight: 420,
                 objectFit: "contain",
                 filter: "drop-shadow(0 0 40px rgba(180,80,130,0.5))",
                 animation: "float 5s ease-in-out infinite",
@@ -146,6 +154,49 @@ export default function Hero() {
           )}
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+            padding-top: 80px !important;
+          }
+          .hero-image-container {
+            min-height: 300px !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+          }
+          .hero-image-container img {
+            max-height: 320px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-grid {
+            gap: 24px !important;
+            padding-top: 60px !important;
+          }
+          .hero-image-container {
+            min-height: 260px !important;
+          }
+          .hero-image-container img {
+            max-height: 280px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-grid {
+            gap: 16px !important;
+            padding-top: 50px !important;
+          }
+          .hero-image-container {
+            min-height: 220px !important;
+          }
+          .hero-image-container img {
+            max-height: 220px !important;
+          }
+        }
+      `}</style>
 
       {/* Scroll indicator */}
       <div style={{

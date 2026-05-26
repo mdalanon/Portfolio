@@ -35,11 +35,11 @@ export default function About() {
       <div className="dot-grid" />  
 
       <div style={{ maxWidth: "var(--max-w)", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: 72, alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: 72, alignItems: "center" }} className="about-grid">
 
           {/* LEFT — pixel art image */}
           <Reveal direction="left">
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative", width: "100%", maxWidth: 340, margin: "0 auto" }} className="about-image-wrapper">
               {/* Dotted border frame matching the reference screenshot */}
               <div style={{
                 position: "absolute",
@@ -51,7 +51,7 @@ export default function About() {
 
               <div style={{
                 width: "100%",
-                aspectRatio: "3/4",
+                paddingBottom: "133.33%",
                 background: "rgba(180,60,120,0.06)",
                 border: "1px solid var(--border-pink)",
                 overflow: "hidden",
@@ -64,7 +64,7 @@ export default function About() {
                   <img
                     src={meta.aboutImage}
                     alt={meta.name}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", position: "relative", zIndex: 1 }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0, zIndex: 1 }}
                   />
                 ) : (
                   <div style={{
@@ -112,7 +112,7 @@ export default function About() {
             </p>
 
             {/* Stats row */}
-            <div style={{ display: "flex", gap: 32, marginTop: 8 }}>
+            <div style={{ display: "flex", gap: 32, marginTop: 8 }} className="about-stats">
               {[
                 { n: "9+", l: "Events" },
                 { n: "5",  l: "Org Roles" },
@@ -127,6 +127,49 @@ export default function About() {
           </Reveal>
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 48px !important;
+          }
+          .about-image-wrapper {
+            max-width: 280px !important;
+            margin: 0 auto !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .about-grid {
+            gap: 32px !important;
+          }
+          .about-image-wrapper {
+            max-width: 240px !important;
+            margin: 0 auto !important;
+          }
+          .about-stats {
+            gap: 20px !important;
+            flex-wrap: wrap;
+          }
+        }
+        @media (max-width: 480px) {
+          .about-grid {
+            gap: 24px !important;
+          }
+          .about-image-wrapper {
+            max-width: 100% !important;
+            margin: 0 auto !important;
+          }
+          .about-stats {
+            gap: 16px !important;
+            justify-content: space-between;
+          }
+          .about-stats > div {
+            flex: 1;
+          }
+        }
+      `}</style>
     </section>
   );
 }

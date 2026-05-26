@@ -43,7 +43,7 @@ export function Skills() {
           <h2 className="sec-title">SKILLS</h2>
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: 16 }} className="skills-grid">
           {skills.map((cat, i) => (
             <Reveal key={cat.name} delay={i * 60}>
               <div
@@ -82,6 +82,27 @@ export function Skills() {
           ))}
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          .skills-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 12px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .skills-grid {
+            grid-template-columns: 1fr !important;
+            gap: 10px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
@@ -117,7 +138,7 @@ export function Projects() {
           <h2 className="sec-title">PROJECTS</h2>
         </Reveal>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }} className="projects-list">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 80}>
               <div
@@ -173,6 +194,44 @@ export function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          .projects-list > div .card {
+            padding: 24px 28px !important;
+          }
+          .projects-list > div .card span {
+            font-size: 72px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .projects-list > div .card {
+            padding: 20px 24px !important;
+          }
+          .projects-list > div .card div[style*="grid"] {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .projects-list > div .card span {
+            font-size: 48px !important;
+          }
+          .projects-list > div .card p[style*="whiteSpace"] {
+            white-space: normal !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .projects-list {
+            gap: 16px !important;
+          }
+          .projects-list > div .card {
+            padding: 16px 20px !important;
+          }
+          .projects-list > div .card span {
+            font-size: 36px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

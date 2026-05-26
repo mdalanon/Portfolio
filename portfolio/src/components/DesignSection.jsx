@@ -495,6 +495,34 @@ export default function DesignSection() {
         </div>
       </div>
 
+      {/* Responsive Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          [class*="design-grid"] {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+            gap: 20px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          [class*="design-grid"] {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+            gap: 16px !important;
+          }
+          [class*="design"] > div > div:nth-child(1) {
+            height: 160px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          [class*="design-grid"] {
+            grid-template-columns: 1fr !important;
+            gap: 12px !important;
+          }
+          [class*="design"] > div > div:nth-child(1) {
+            height: 140px !important;
+          }
+        }
+      `}</style>
+
       {/* Design Details Modal */}
       {modalOpen && selectedDesign && (
         <DesignModal design={selectedDesign} onClose={closeModal} />
