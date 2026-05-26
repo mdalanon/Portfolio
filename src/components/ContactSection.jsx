@@ -107,7 +107,7 @@ export default function ContactSection() {
             <ContactItem label="Full Name" value={meta.name} />
             <ContactItem label="Email" value={contact.email} href={`mailto:${contact.email}`} onCopy={() => handleCopy(contact.email)} />
             <ContactItem label="Phone" value={contact.phone} href={`tel:${contact.phone}`} onCopy={() => handleCopy(contact.phone)} />
-            <ContactItem label="Location" value="Indang, Cavite, Philippines" />
+            <ContactItem label="Location" value="Alabang, Muntinlupa, Philippines" />
             <ContactItem label="LinkedIn" value={contact.linkedin} href={contact.linkedinUrl} />
           </div>
         </Reveal>
@@ -115,7 +115,7 @@ export default function ContactSection() {
         <Reveal delay={140}>
           <div style={{ marginTop: 40, padding: "22px 24px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)" }}>
             <p style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--text-2)", lineHeight: 1.8, marginBottom: 18 }}>
-              I am open to internships, collaborations, and project opportunities.
+              I am open to freelance work, full-time positions, collaborations, and project opportunities.
             </p>
             <a href={contact.linkedinUrl} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", padding: "12px 16px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.03)", color: "var(--text-1)", fontFamily: "var(--font-mono)", fontSize: 12, textTransform: "uppercase" }}>
               LinkedIn
