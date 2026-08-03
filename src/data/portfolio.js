@@ -257,6 +257,13 @@ export const events = [
     description: "Women's month event for AWS BuildHers+ Philippines focusing on empowering women in tech.",
     photos: [],
   },
+  {
+    title: "AWS User Group Buildhers+ - Code with Color: Build What Matters",
+    date: "June 20, 2026",
+    role: "Director of Operations",
+    description: "AWS BuildHers+ Pride Month speaker series and ideathon with the theme Pride in every build",
+    photos: [],
+  },
 ];
 
 export const achievements = [
@@ -267,7 +274,7 @@ export const achievements = [
   { tag: "Certificate", title: "Volunteer — Echelon Philippines 2025", org: "Echelon Philippines", role: "Registration Usher", highlight: true },
   { tag: "Certificate", title: "Volunteer — AWS SCD 2025", org: "AWS SCD", role: "Registration", highlight: true },
   { tag: "Certificate", title: "Volunteer — Philippine Design Fest", org: "Philippine Design Fest", role: "Program Committee", highlight: true },
-  { tag: "Certificate", title: "Volunteer — Python Asia 202", org: "Python Asia 202", role: "Co-Lead of Marketing", highlight: true },
+  { tag: "Certificate", title: "Volunteer — Python Asia 2026", org: "Python Asia 2026", role: "Co-Lead of Marketing", highlight: true },
 ];
 
 export const contact = {
