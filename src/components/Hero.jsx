@@ -60,7 +60,7 @@ export default function Hero() {
             {[...Array(8)].map((_, i) => (
               <div key={i} style={{
                 width: 5, height: 5,
-                background: i < 3 ? "var(--pink)" : "var(--text-4)",
+                background: i < 3 ? "var(--pink)" : "var(--text-2)",
                 borderRadius: 1,
               }} />
             ))}
@@ -94,7 +94,7 @@ export default function Hero() {
             }}>
               {meta.name}
             </span>
-            <span style={{ color: "var(--text-3)", fontSize: 11 }}>|</span>
+            <span style={{ color: "var(--text-2)", fontSize: 11 }}>|</span>
             <span
               key={idx}
               style={{
@@ -117,7 +117,7 @@ export default function Hero() {
           {/* Mono year tag */}
           <p style={{
             fontFamily: "var(--font-mono)",
-            fontSize: 10, color: "var(--text-3)",
+            fontSize: 10, color: "var(--text-2)",
             letterSpacing: ".14em", textTransform: "uppercase",
             marginTop: 48,
           }}>
@@ -204,7 +204,7 @@ export default function Hero() {
         display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
         animation: "fadeIn 1s 1.2s both",
       }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-3)", letterSpacing: ".16em" }}>SCROLL</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-2)", letterSpacing: ".16em" }}>SCROLL</span>
         <div style={{ width: 1, height: 36, background: "linear-gradient(to bottom, var(--pink), transparent)" }} />
       </div>
     </section>
@@ -225,10 +225,10 @@ function CharacterPlaceholder() {
       {/* Dot grid inside the frame */}
       <div className="dot-grid" style={{ opacity: .6 }} />
       <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 10 }}>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-2)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 10 }}>
           Add your character art
         </p>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-4)", letterSpacing: ".1em" }}>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-3)", letterSpacing: ".1em" }}>
           meta.heroImage in portfolio.js
         </p>
       </div>

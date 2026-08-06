@@ -176,7 +176,7 @@ export function Projects() {
                       {p.description}
                     </p>
                   </div>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-4)", letterSpacing: ".08em", whiteSpace: "nowrap", paddingTop: 4 }}>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".08em", whiteSpace: "nowrap", paddingTop: 4 }}>
                     {p.period}
                   </p>
                 </div>

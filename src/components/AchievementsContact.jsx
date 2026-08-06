@@ -60,7 +60,7 @@ export function Achievements() {
                 <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".06em", marginBottom: 6 }}>
                   {a.org}
                 </p>
-                <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-4)", letterSpacing: ".05em", textTransform: "uppercase" }}>
+                <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-3)", letterSpacing: ".05em", textTransform: "uppercase" }}>
                   {a.role}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export function Footer() {
       <span style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "var(--text-1)", letterSpacing: ".08em" }}>
         {meta.name.toUpperCase()}<span style={{ color: "var(--pink)" }}>.</span>
       </span>
-      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-4)", letterSpacing: ".12em", textTransform: "uppercase" }}>
+      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".12em", textTransform: "uppercase" }}>
         © {meta.year}
       </span>
     </footer>

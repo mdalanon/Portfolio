@@ -76,7 +76,7 @@ export default function About() {
                     <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".12em", textTransform: "uppercase" }}>
                       Your photo here
                     </p>
-                    <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-4)", letterSpacing: ".1em" }}>
+                    <p style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--text-2)", letterSpacing: ".1em" }}>
                       meta.aboutImage
                     </p>
                   </div>

@@ -123,7 +123,7 @@ function LeadershipRow({ role, index, last }) {
       borderBottom: last ? "none" : "1px solid var(--border)",
       alignItems: "start",
     }}>
-      <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-4)", paddingTop: 2 }}>
+      <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-3)", paddingTop: 2 }}>
         {String(index + 1).padStart(2, "0")}
       </span>
       <div>

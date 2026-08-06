@@ -46,6 +46,13 @@ npm install
 npm run dev
 ```
 
+4. After making changes, commit and push to the repository:
+```bash
+git add .
+git commit -m "Update portfolio event and achievement entries"
+git push origin main
+```
+
 The site will be available at `http://localhost:5173`
 
 ## 📦 Build

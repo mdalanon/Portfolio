@@ -78,7 +78,7 @@ function EventModal({ event, onClose }) {
               )}
             </>
           ) : (
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 52, color: "rgba(255,255,255,0.04)", letterSpacing: ".08em", position: "relative" }}>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 52, color: "rgba(255,255,255,0.10)", letterSpacing: ".08em", position: "relative" }}>
               GALLERY
             </span>
           )}
@@ -105,7 +105,7 @@ function EventModal({ event, onClose }) {
             {event.description}
           </p>
           {!hasPhotos && (
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-4)", marginBottom: 20 }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", marginBottom: 20 }}>
               Add photos in src/data/portfolio.js → events[].photos
             </p>
           )}
@@ -160,7 +160,7 @@ function EventRow({ event, index }) {
             transition: "background var(--t)",
           }}
         >
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-4)" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-3)" }}>
             {String(index + 1).padStart(2, "0")}
           </span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".04em" }}>
@@ -173,10 +173,10 @@ function EventRow({ event, index }) {
           }}>
             {event.title}
           </h3>
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-4)", letterSpacing: ".06em", textTransform: "uppercase" }}>
+          <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)", letterSpacing: ".06em", textTransform: "uppercase" }}>
             {event.role}
           </p>
-          <span style={{ color: hov ? "var(--pink)" : "var(--text-4)", fontSize: 14, transition: "color var(--t), transform var(--t)", transform: hov ? "translateX(2px)" : "none" }}>›</span>
+          <span style={{ color: hov ? "var(--pink)" : "var(--text-3)", fontSize: 14, transition: "color var(--t), transform var(--t)", transform: hov ? "translateX(2px)" : "none" }}>›</span>
         </div>
       </Reveal>
 

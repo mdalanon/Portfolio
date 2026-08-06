@@ -12,6 +12,32 @@ function SectionDivider() {
   );
 }
 
+function formatDescription(text) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = urlRegex.exec(text)) !== null) {
+    parts.push(text.slice(lastIndex, match.index));
+    parts.push(
+      <a
+        key={`link-${match.index}`}
+        href={match[0]}
+        target="_blank"
+        rel="noreferrer noopener"
+        style={{ color: "var(--pink-light)", textDecoration: "underline" }}
+      >
+        {match[0]}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  parts.push(text.slice(lastIndex));
+  return parts;
+}
+
 /* ── Design Details Modal ── */
 function DesignModal({ design, onClose }) {
   const handleBackdropClick = (e) => {
@@ -111,7 +137,7 @@ function DesignModal({ design, onClose }) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "var(--text-4)",
+                color: "var(--text-2)",
                 fontFamily: "var(--font-mono)",
                 fontSize: 16,
                 textAlign: "center",
@@ -156,7 +182,7 @@ function DesignModal({ design, onClose }) {
                 lineHeight: 1.8,
                 marginBottom: 24,
               }}>
-                {design.description}
+                {formatDescription(design.description)}
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -215,25 +241,6 @@ function DesignModal({ design, onClose }) {
                       color: "var(--text-2)",
                     }}>
                       {design.category}
-                    </p>
-                  </div>
-                  <div>
-                    <p style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 10,
-                      color: "var(--text-3)",
-                      letterSpacing: ".08em",
-                      textTransform: "uppercase",
-                      marginBottom: 4,
-                    }}>
-                      Date Created
-                    </p>
-                    <p style={{
-                      fontFamily: "var(--font-body)",
-                      fontSize: 13,
-                      color: "var(--text-2)",
-                    }}>
-                      {design.date}
                     </p>
                   </div>
                 </div>
@@ -392,7 +399,7 @@ export default function DesignSection() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "var(--text-4)",
+                      color: "var(--text-2)",
                       fontFamily: "var(--font-mono)",
                       fontSize: 12,
                     }}>
@@ -460,12 +467,12 @@ export default function DesignSection() {
                     lineHeight: 1.6,
                     marginBottom: 16,
                   }}>
-                    {design.description}
+                    {formatDescription(design.description)}
                   </p>
                   <p style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: 11,
-                    color: "var(--text-4)",
+                    color: "var(--text-2)",
                     letterSpacing: ".08em",
                   }}>
                     {design.tools}

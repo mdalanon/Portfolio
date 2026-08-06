@@ -17,16 +17,16 @@
   --pink-dim:    rgba(180, 60, 120, 0.12);
 
   --bg:          #0e0a0d;
-  --bg-card:     rgba(255,255,255,0.03);
-  --bg-card-hov: rgba(255,255,255,0.055);
+  --bg-card:     rgba(255,255,255,0.08);
+  --bg-card-hov: rgba(255,255,255,0.12);
 
-  --border:      rgba(255,255,255,0.07);
-  --border-pink: rgba(212, 84, 138, 0.35);
+  --border:      rgba(255,255,255,0.12);
+  --border-pink: rgba(212, 84, 138, 0.45);
 
-  --text-1: #f0e8ec;
-  --text-2: #a08898;
-  --text-3: #604858;
-  --text-4: #3a2830;
+  --text-1: #f5eef3;
+  --text-2: #d8c6d5;
+  --text-3: #b7a0b2;
+  --text-4: #9b8598;
 
   /* Typography */
   --font-display: 'Bebas Neue', 'Impact', sans-serif;
@@ -46,7 +46,13 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-  background: var(--bg);
+  min-height: 100vh;
+  background: radial-gradient(circle at 18% 12%, rgba(212,84,138,0.24), transparent 18%),
+              radial-gradient(circle at 82% 14%, rgba(255,255,255,0.08), transparent 22%),
+              radial-gradient(circle at 50% 90%, rgba(180,70,120,0.16), transparent 25%),
+              linear-gradient(180deg, #0b0610 0%, #0f0611 46%, #110414 100%);
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--text-1);
   font-family: var(--font-body);
   font-weight: 400;
@@ -72,6 +78,24 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 .section {
   padding: var(--section-y) var(--pad-x);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 28px;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.16);
+  backdrop-filter: blur(14px);
+}
+
+.section, .section p, .section li, .section span, .section td {
+  color: var(--text-2);
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+  color: var(--text-1);
 }
 
 /* ── Section title style ── */

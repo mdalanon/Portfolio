@@ -28,7 +28,7 @@ function ContactItem({ label, value, href, onCopy }) {
         padding: "22px 24px",
         borderRadius: 2,
         border: "1px solid var(--border)",
-        background: "rgba(255,255,255,0.02)",
+        background: "rgba(255,255,255,0.08)",
         transition: "transform var(--t), border-color var(--t), background var(--t)",
         textDecoration: "none",
         color: "inherit",
@@ -97,7 +97,7 @@ export default function ContactSection() {
           <p className="sec-label">// 10</p>
           <SectionDivider />
           <h2 className="sec-title">CONTACT ME</h2>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--text-3)", maxWidth: 620, lineHeight: 1.8, marginBottom: 48 }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--text-2)", maxWidth: 620, lineHeight: 1.8, marginBottom: 48 }}>
             Let's connect! Feel free to reach out through any of the platforms below.
           </p>
         </Reveal>
@@ -113,11 +113,11 @@ export default function ContactSection() {
         </Reveal>
 
         <Reveal delay={140}>
-          <div style={{ marginTop: 40, padding: "22px 24px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)" }}>
+          <div style={{ marginTop: 40, padding: "22px 24px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.06)" }}>
             <p style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--text-2)", lineHeight: 1.8, marginBottom: 18 }}>
               I am open to freelance work, full-time positions, collaborations, and project opportunities.
             </p>
-            <a href={contact.linkedinUrl} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", padding: "12px 16px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.03)", color: "var(--text-1)", fontFamily: "var(--font-mono)", fontSize: 12, textTransform: "uppercase" }}>
+            <a href={contact.linkedinUrl} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", padding: "12px 16px", borderRadius: 2, border: "1px solid var(--border)", background: "rgba(255,255,255,0.08)", color: "var(--text-1)", fontFamily: "var(--font-mono)", fontSize: 12, textTransform: "uppercase" }}>
               LinkedIn
             </a>
           </div>

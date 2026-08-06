@@ -37,9 +37,9 @@ export const education = [
 export const skills = [
   { name: "Programming",      items: ["Python", "Java"] },
   { name: "Web Technologies", items: ["CSS", "React"] },
-  { name: "Management",       items: ["Trello", "Notion", "Luma"] },
+  { name: "Management",       items: ["Trello", "Notion"] },
   { name: "Design",           items: ["Figma", "Canva"] },
-  { name: "Soft Skills",      items: ["Coordination", "Leadership", "Documentation"] },
+  { name: "Soft Skills",      items: ["Project coordinatio", "Leadership", "Documentation", "Quality Assurance", "Adaptability", "Multitasking", "Time Management"] },
 ];
 
 export const projects = [
@@ -58,6 +58,14 @@ export const projects = [
     stack: "Luau",
     description:
       "Designer and Documentation Lead for a psychological horror Roblox game exploring narrative-driven mechanics.",
+  },
+{
+    num: "03",
+    title: "GATEWAY INTEGRATED SCHOOL",
+    period: "May 2026 – Jun 2026",
+    stack: "Quality assurance",
+    description:
+      "Identified and reported bugs, contributing to improved system performance and user experience. ",
   },
 ];
 
@@ -98,7 +106,7 @@ export const designs = [
     num: "05",
     title: "Game Poster Design",
     category: "Posters and Pubmats",
-    tools: "Photoshop · Illustrator",
+    tools: "Canva",
     description: "The main promotional poster for the game, designed to visually represent its theme and attract audience interest.",
     image: "/img/IMG7.png",
   },
@@ -114,9 +122,33 @@ export const designs = [
     num: "07",
     title: "Operations Team Banner (Google Form)",
     category: "UI/UX Design",
-    tools: "Figma · InVision",
+    tools: "Canva",
     description: "A banner designed for an Operations Team Google Form, created to provide a clear and professional visual identity for submissions and internal coordination.",
     image: "/img/IMG9.png",
+  },
+    {
+    num: "08",
+    title: "DEVCON Kids – 16th Anniversary Campaign",
+    category: "Marketing",
+    tools: "Good Docs and Canva",
+    description: "A promotional video celebrating 16 years of DEVCON, showcasing the impact of DEVCON Kids through engaging storytelling and motion design. Watch here: https://www.facebook.com/share/v/1BMxKJwium/",
+    image: "/img/IMG10.png",
+  },
+  {
+    num: "09",
+    title: "DEVCON Jumpstart",
+    category: "Marketing",
+    tools: "Good Docs and Canva",
+    description: "A promotional video Jumpstart your tech career with DEVCON. Watch here: https://www.facebook.com/share/r/1Bn1esALTK/",
+    image: "/img/IMG11.png",
+  },
+  {
+    num: "10",
+    title: "Marketing Templates in Python Asia 2026",
+    category: "Marketing",
+    tools: "Figma",
+    description: "Designed marketing templates to promote Python Asia 2026 with clear, engaging, and brand-consistent visuals.",
+    image: "/img/IMG12.png",
   },
 ];
 
