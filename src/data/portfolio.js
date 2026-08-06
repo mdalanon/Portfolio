@@ -181,7 +181,7 @@ export const leadership = [
   },
   {
     title: "Chief of Operations & Events",
-    org: "AWS Learning Club – Spade",
+    org: "AWS Sudent Builder Group – Spade",
     period: "2024–2026",
     description: "Led operations and event coordination for AWS programs.",
   },
